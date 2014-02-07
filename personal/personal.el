@@ -62,13 +62,26 @@
 (whitespace-mode +0)
 (setq prelude-whitespace nil)
 
+(defvar active-window (frame-selected-window))
+
+(defun active-window-switch ()
+  (let ((win (frame-selected-window)))
+    (when (not (eq win active-window))
+      (with-selected-window active-window
+        (buffer-face-mode -1))
+      (setq active-window win)
+      (setq buffer-face-mode-face (list :background "#222"))
+      (buffer-face-mode 1))))
+
+(add-hook 'post-command-hook #'active-window-switch)
+
+
+
 (cond
  ((file-exists-p "d:/workspace") (dired "d:/workspace/"))
  ((file-exists-p "c:/workspace") (dired "c:/workspace/"))
  ( t (dired "~/"))
  )
-                                        ;(dired-details-hide)
-
 (split-window-horizontally 20)
 (other-window 1)
 (switch-to-buffer "*scratch*")
