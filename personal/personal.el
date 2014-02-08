@@ -1,10 +1,10 @@
 ;;personalized in
-;disable backup
+                                        ;disable backup
 (setq backup-inhibited t)
-;disable auto save
+                                        ;disable auto save
 (setq auto-save-default nil)
 
- (remove-hook 'find-file-hooks 'vc-find-file-hook)
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -12,8 +12,8 @@
                "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;(require 'js2-mode)
-;(require 'html-mode)
+                                        ;(require 'js2-mode)
+                                        ;(require 'html-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
 
@@ -74,8 +74,6 @@
       (buffer-face-mode 1))))
 
 (add-hook 'post-command-hook #'active-window-switch)
-
-
 
 (cond
  ((file-exists-p "d:/workspace") (dired "d:/workspace/"))
