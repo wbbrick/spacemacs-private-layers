@@ -1,7 +1,6 @@
-;;personalized in
-                                        ;disable backup
+;disable backup
 (setq backup-inhibited t)
-                                        ;disable auto save
+;disable auto save
 (setq auto-save-default nil)
 
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
@@ -17,9 +16,23 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
 
-(defun turn-on-ac-js2 () (ac-js2-mode 1))
+
+(defun add-space-in-parens ()
+  (interactive)
+  (goto-line 0)
+  (goto-char 0)
+  (replace-regexp "\\([^( ]\\ ))" "\\1 \ )")
+  (goto-line 0)
+  (goto-char 0)
+  (replace-regexp "(\\([^ )]\\ )" "\( \\1"))
+
+
+
+(defun turn-on-ac-js2 () (auto-complete-mode 1) (ac-js2-mode 1))
+
 (add-hook 'js2-mode-hook 'turn-on-ac-js2)
 (add-hook 'windmove-hook 'crosshairs-flash)
+
 
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
