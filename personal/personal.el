@@ -49,6 +49,7 @@
   t " my-keys" 'my-keys-minor-mode-map)
 
 (defun open-external-explorer () (interactive) (shell-command "explorer ."))
+(defun open-personal-file () (interactive) (find-file "~/.emacs.d/personal/personal.el"))
 
 (my-keys-minor-mode 1)
 
@@ -69,7 +70,9 @@
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 
 (global-set-key [f12] 'open-external-explorer)
+(global-set-key [f11] 'open-personal-file)
 (global-set-key [f5] 'call-last-kbd-macro)
+
 
 (global-hl-line-mode +0)
 (whitespace-mode +0)
@@ -83,7 +86,7 @@
       (with-selected-window active-window
         (buffer-face-mode -1))
       (setq active-window win)
-      (setq buffer-face-mode-face (list :background "#222"))
+      (setq buffer-face-mode-face (list :background "#181818"))
       (buffer-face-mode 1))))
 
 (add-hook 'post-command-hook #'active-window-switch)
