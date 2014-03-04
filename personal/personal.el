@@ -3,6 +3,8 @@
 ;disable auto save
 (setq auto-save-default nil)
 
+(setq eshell-directory-name "d:/workspace")
+
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (require 'package)
@@ -25,8 +27,6 @@
   (goto-line 0)
   (goto-char 0)
   (replace-regexp "(\\([^ )]\\ )" "\( \\1"))
-
-
 
 (defun turn-on-ac-js2 () (auto-complete-mode 1) (ac-js2-mode 1))
 
@@ -97,15 +97,17 @@
 (add-hook 'post-command-hook #'active-window-switch)
 
 (cond
- ((file-exists-p "d:/workspace") (dired "d:/workspace/"))
- ((file-exists-p "c:/workspace") (dired "c:/workspace/"))
- ( t (dired "~/"))
+ ((file-exists-p "d:/workspace") (cd "D:/workspace") )
+ ((file-exists-p "c:/workspace") (cd "C:/workspace") )
+ ( t (cd "~/"))
  )
+(dired ".")
 (split-window-horizontally 20)
 (other-window 1)
 (switch-to-buffer "*scratch*")
 (split-window-vertically 30)
 (other-window 1)
+
 (eshell)
 (other-window 1)
 
