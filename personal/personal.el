@@ -7,6 +7,11 @@
 
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
+(require 'key-chord)
+
+(require 'em-smart)
+(defun eshell/ll () 'ls)
+
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" .
@@ -68,7 +73,6 @@
 (global-set-key (kbd "<f8>") 'execute-extended-command)
 (global-set-key (kbd "M-`") 'doremi-buffers+)
 (global-set-key (kbd "C-`") 'doremi-window-height+)
-(global-set-key (kbd "C-q") 'kill-this-buffer)
 
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
