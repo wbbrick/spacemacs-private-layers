@@ -3,8 +3,6 @@
 ;disable auto save
 (setq auto-save-default nil)
 
-(setq eshell-directory-name "d:/workspace")
-
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (require 'key-chord)
