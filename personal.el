@@ -10,16 +10,40 @@
 (require 'em-smart)
 (defun eshell/ll () 'ls)
 
+(require 'flycheck)
+(flycheck-define-checker javascript-jslint-reporter
+  "A JavaScript syntax and style checker based on JSLint Reporter.
+
+See URL `https://github.com/FND/jslint-reporter'."
+  :command ("~/.emacs.d/jslint-reporter --jshint" source)
+  :error-patterns
+  ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
+  :modes (js-mode js2-mode js3-mode web-mode))
+(add-hook 'js-mode-hook (lambda ()
+                          (flycheck-select-checker 'javascript-jslint-reporter)
+                          (flycheck-mode)))
+
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" .
                "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-                                        ;(require 'js2-mode)
-                                        ;(require 'html-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+(setq web-mode-code-indent-offset 4)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-markup-indent-offset 2)
+
+;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;(add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
 
 
 (defun add-space-in-parens ()
