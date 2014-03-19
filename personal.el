@@ -128,6 +128,7 @@ See URL `https://github.com/FND/jslint-reporter'."
 (add-hook 'post-command-hook #'active-window-switch)
 
 (cond
+ ((file-exists-p "e:/workspace") (cd "E:/workspace") )
  ((file-exists-p "d:/workspace") (cd "D:/workspace") )
  ((file-exists-p "c:/workspace") (cd "C:/workspace") )
  ( t (cd "~/"))
