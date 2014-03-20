@@ -14,6 +14,11 @@
 (require 'em-smart)
 (defun eshell/ll () 'ls)
 
+
+(require 'dired-details+)
+
+
+
 (require 'flycheck)
 (flycheck-define-checker javascript-jslint-reporter
   "A JavaScript syntax and style checker based on JSLint Reporter.
