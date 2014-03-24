@@ -19,18 +19,18 @@
 
 
 
-(require 'flycheck)
-(flycheck-define-checker javascript-jslint-reporter
-  "A JavaScript syntax and style checker based on JSLint Reporter.
+;(require 'flycheck)
+;(flycheck-define-checker javascript-jslint-reporter
+;  "A JavaScript syntax and style checker based on JSLint Reporter.
 
-See URL `https://github.com/FND/jslint-reporter'."
-  :command ("~/.emacs.d/jslint-reporter --jshint" source)
-  :error-patterns
-  ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
-  :modes (js-mode js2-mode js3-mode web-mode))
-(add-hook 'js-mode-hook (lambda ()
-                          (flycheck-select-checker 'javascript-jslint-reporter)
-                          (flycheck-mode)))
+;See URL `https://github.com/FND/jslint-reporter'."
+;  :command ("~/.emacs.d/jslint-reporter --jshint" source)
+;  :error-patterns
+;  ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
+;  :modes (js-mode js2-mode js3-mode web-mode))
+;(add-hook 'js-mode-hook (lambda ()
+;                          (flycheck-select-checker 'javascript-jslint-reporter)
+;                          (flycheck-mode)))
 
 (require 'package)
 (add-to-list 'package-archives
