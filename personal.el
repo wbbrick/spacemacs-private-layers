@@ -3,7 +3,7 @@
 ;disable auto save
 (setq auto-save-default nil)
 
-(remove-hook 'find-file-hooks 'vc-find-file-hook)
+;; (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
@@ -14,23 +14,30 @@
 (require 'em-smart)
 (defun eshell/ll () 'ls)
 
-
+(require 'dired-rainbow)
 (require 'dired-details+)
 
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
 
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input"
+  (interactive)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (goto-line (read-number "Goto line: ")))
+    (linum-mode -1)))
 
-;(require 'flycheck)
-;(flycheck-define-checker javascript-jslint-reporter
-;  "A JavaScript syntax and style checker based on JSLint Reporter.
+(global-set-key (kbd "C-x g") 'webjump)
 
-;See URL `https://github.com/FND/jslint-reporter'."
-;  :command ("~/.emacs.d/jslint-reporter --jshint" source)
-;  :error-patterns
-;  ((error line-start (1+ nonl) ":" line ":" column ":" (message) line-end))
-;  :modes (js-mode js2-mode js3-mode web-mode))
-;(add-hook 'js-mode-hook (lambda ()
-;                          (flycheck-select-checker 'javascript-jslint-reporter)
-;                          (flycheck-mode)))
+Add DuckDuckGo to webjump
+(eval-after-load "webjump"
+  '(add-to-list 'webjump-sites
+                '("ddg" .
+                  [simple-query
+                   "www.duckduckgo.com"
+                   "https://duckduckgo.com/?q="
+                   ""])))
 
 (require 'package)
 (add-to-list 'package-archives
