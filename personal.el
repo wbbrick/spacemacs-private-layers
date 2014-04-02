@@ -66,7 +66,7 @@
 
 (defun turn-on-ac-js2 () (auto-complete-mode 1) (ac-js2-mode 1))
 
-(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
+;(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
 
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -87,7 +87,7 @@
 
 (defun clean-js-file () (interactive)
   (delete-trailing-whitespace)
-  (query-replace "\"" "'"  nil (point-min) (point-max))
+  (prelude-untabify-buffer)
   )
 
 (my-keys-minor-mode 1)
@@ -110,7 +110,7 @@
 
 (global-set-key [f12] 'open-external-explorer)
 (global-set-key [f11] 'open-personal-file)
-(global-set-key [f10] 'delete-trailing-whitespace)
+(global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
 
