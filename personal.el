@@ -11,7 +11,6 @@
 
 (require 'key-chord)
 
-
 (require 'dired-rainbow)
 (require 'dired-details+)
 
@@ -28,7 +27,7 @@
 
 (global-set-key (kbd "C-x g") 'webjump)
 
-Add DuckDuckGo to webjump
+; Add DuckDuckGo to webjump
 (eval-after-load "webjump"
   '(add-to-list 'webjump-sites
                 '("ddg" .
