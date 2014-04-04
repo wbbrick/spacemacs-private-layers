@@ -11,8 +11,6 @@
 
 (require 'key-chord)
 
-(require 'em-smart)
-(defun eshell/ll () 'ls)
 
 (require 'dired-rainbow)
 (require 'dired-details+)
