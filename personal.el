@@ -3,7 +3,8 @@
 ;disable auto save
 (setq auto-save-default nil)
 
-;; (remove-hook 'find-file-hooks 'vc-find-file-hook)
+(require 'main-line)
+(setq main-line-separator-style 'save)
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
@@ -14,6 +15,8 @@
 (require 'dired-rainbow)
 (require 'dired-details+)
 
+(scroll-bar-mode -1)
+(global-font-lock-mode 1)
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
 (defun goto-line-with-feedback ()
@@ -87,7 +90,7 @@
   t " my-keys" 'my-keys-minor-mode-map)
 
 (defun open-external-explorer () (interactive) (shell-command "explorer ."))
-(defun open-personal-file () (interactive) (find-file "~/.emacs.d/personal/personal.el"))
+ (defun open-personal-file () (interactive) (find-file "~/.emacs.d/personal/personal.el"))
 
 (defun clean-js-file () (interactive)
   (delete-trailing-whitespace)
@@ -113,7 +116,7 @@
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 
 (global-set-key [f12] 'open-external-explorer)
-(global-set-key [f11] 'open-personal-file)
+ (global-set-key [f11] 'open-personal-file)
 (global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
@@ -147,6 +150,9 @@
 (switch-to-buffer "*scratch*")
 (split-window-vertically 30)
 (other-window 1)
+
+;(require 'main-line)
+;(setq main-line-separator-style 'zigzag)
 
 (eshell)
 (other-window 1)
