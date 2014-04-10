@@ -11,9 +11,16 @@
 (global-whitespace-mode t)
 
 (require 'key-chord)
+(key-chord-mode 1)
+(key-chord-define-global "qw" 'kill-this-buffer)
 
 (require 'dired-rainbow)
 (require 'dired-details+)
+
+(require 'undo-tree)
+(undo-tree-mode 1)
+
+
 
 (scroll-bar-mode -1)
 (global-font-lock-mode 1)
@@ -57,6 +64,9 @@
 (setq web-mode-code-indent-offset 4)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-markup-indent-offset 2)
+
+(setq initial-scratch-message
+      ";; scratch buffer")
 
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;(add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
