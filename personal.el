@@ -15,8 +15,6 @@
 (require 'undo-tree)
 (undo-tree-mode 1)
 
-
-
 (scroll-bar-mode -1)
 (global-font-lock-mode 1)
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
@@ -55,6 +53,7 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
 
 (setq web-mode-code-indent-offset 4)
 (setq web-mode-css-indent-offset 2)
@@ -117,12 +116,14 @@
 (global-set-key (kbd "<f8>") 'execute-extended-command)
 (global-set-key (kbd "M-`") 'doremi-buffers+)
 (global-set-key (kbd "C-`") 'doremi-window-height+)
+(global-set-key (kbd "M-q") 'kill-buffer)
+
 
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 
 (global-set-key [f12] 'open-external-explorer)
- (global-set-key [f11] 'open-personal-file)
+(global-set-key [f11] 'open-personal-file)
 (global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
