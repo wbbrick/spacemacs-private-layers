@@ -9,8 +9,6 @@
 
 (require 'key-chord)
 (key-chord-mode 1)
-(key-chord-define-global "qw" 'kill-this-buffer)
-
 (require 'dired-rainbow)
 (require 'dired-details+)
 
@@ -86,6 +84,7 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
+(define-key my-keys-minor-mode-map (kbd "M-q") 'kill-this-buffer)
 
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char) ; was indent-new-comment-line
 (define-key my-keys-minor-mode-map (kbd "M-l") 'forward-char)  ; was downcase-word
