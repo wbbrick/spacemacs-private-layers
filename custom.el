@@ -10,6 +10,7 @@
  '(display-time-24hr-format nil)
  '(eshell-load-hook nil)
  '(fci-rule-color "#383838")
+ '(js-indent-level 4)
  '(js3-indent-level 4)
  '(main-line-separator-style (quote arrow14))
  '(mode-line-format (quote ("%e" (:eval (concat (main-line-rmw (quote left) main-line-color1) (main-line-buffer-id (quote left) main-line-color1 main-line-color2) (main-line-major-mode (quote left) main-line-color1) (main-line-narrow (quote left) main-line-color1 main-line-color2) (main-line-vc (quote center) main-line-color2) (main-line-make-fill main-line-color2) (main-line-row (quote right) main-line-color1 main-line-color2) (main-line-percent-xpm (quote right) nil main-line-color1) (main-line-percent (quote center) nil main-line-color1))))))
