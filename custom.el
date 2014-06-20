@@ -6,7 +6,8 @@
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
  '(custom-enabled-themes (quote (wombat)))
  '(custom-safe-themes (quote ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
- '(dired-listing-switches "-l")
+ '(dired-details-hidden-string "")
+ '(dired-listing-switches "1 a")
  '(display-time-24hr-format nil)
  '(eshell-load-hook nil)
  '(fci-rule-color "#383838")
@@ -22,7 +23,8 @@
  '(sml-modeline-numbers (quote percentage))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map (quote ((20 . "#BC8383") (40 . "#CC9393") (60 . "#DFAF8F") (80 . "#D0BF8F") (100 . "#E0CF9F") (120 . "#F0DFAF") (140 . "#5F7F5F") (160 . "#7F9F7F") (180 . "#8FB28F") (200 . "#9FC59F") (220 . "#AFD8AF") (240 . "#BFEBBF") (260 . "#93E0E3") (280 . "#6CA0A3") (300 . "#7CB8BB") (320 . "#8CD0D3") (340 . "#94BFF3") (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
+ '(vc-annotate-very-old-color "#DC8CC3")
+ '(whitespace-line-column 80))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
