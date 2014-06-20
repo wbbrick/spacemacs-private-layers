@@ -9,7 +9,7 @@
 
 (require 'key-chord)
 (key-chord-mode 1)
-(require 'dired-rainbow)
+;(require 'dired-rainbow)
 (require 'dired-details+)
 
 (require 'undo-tree)
