@@ -119,7 +119,9 @@
 (global-set-key (kbd "M-q") 'kill-buffer)
 
 
+(global-set-key (kbd "M-2") 'next-multiframe-window)
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
+(global-set-key (kbd "M-1") 'previous-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 
 (global-set-key [f12] 'open-external-explorer)
@@ -284,5 +286,3 @@
 ;; auto-complete-mode
 ;; json-mode
 ;; dired-details-hide
-
-
