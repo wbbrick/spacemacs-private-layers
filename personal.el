@@ -153,16 +153,17 @@
  ((file-exists-p "c:/workspace") (cd "C:/workspace") )
  ( t (cd "~/"))
  )
+
+(setq org-agenda-files (list "../org/work.org"
+                             "../org/home.org"))
+
+
 (dired ".")
 (split-window-horizontally 20)
 (other-window 1)
-(switch-to-buffer "*scratch*")
+(dired "../org")
 (split-window-vertically 30)
 (other-window 1)
-
-;(require 'main-line)
-;(setq main-line-separator-style 'zigzag)
-
 (eshell)
 (other-window 1)
 
