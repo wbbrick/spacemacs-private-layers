@@ -120,7 +120,9 @@
 (global-set-key (kbd "M-q") 'kill-buffer)
 
 
+(global-set-key (kbd "M-2") 'next-multiframe-window)
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
+(global-set-key (kbd "M-1") 'previous-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
 
 (global-set-key [f12] 'open-external-explorer)
@@ -152,16 +154,17 @@
  ((file-exists-p "c:/workspace") (cd "C:/workspace") )
  ( t (cd "~/"))
  )
+
+(setq org-agenda-files (list "../org/work.org"
+                             "../org/home.org"))
+
+
 (dired ".")
 (split-window-horizontally 20)
 (other-window 1)
-(switch-to-buffer "*scratch*")
+(dired "../org")
 (split-window-vertically 30)
 (other-window 1)
-
-;(require 'main-line)
-;(setq main-line-separator-style 'zigzag)
-
 (eshell)
 (other-window 1)
 
