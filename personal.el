@@ -2,9 +2,10 @@
 (setq backup-inhibited t)
 ;disable auto save
 (setq auto-save-default nil)
+(setq-default indent-tabs-mode t)
 
 (require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
+(setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
 
 (require 'key-chord)
@@ -99,7 +100,7 @@
 
 (defun clean-js-file () (interactive)
   (delete-trailing-whitespace)
-  (prelude-untabify-buffer)
+  (prelude-tabify-buffer)
   )
 
 (my-keys-minor-mode 1)
@@ -284,5 +285,3 @@
 ;; auto-complete-mode
 ;; json-mode
 ;; dired-details-hide
-
-
