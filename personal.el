@@ -19,9 +19,9 @@
 (scroll-bar-mode -1)
 (global-font-lock-mode 1)
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
-(require 'git-gutter+)
 
-(git-gutter+-mode 1)
+(require 'git-gutter+)
+(global-git-gutter+-mode 1)
 
 
 (defun goto-line-with-feedback ()
