@@ -19,6 +19,10 @@
 (scroll-bar-mode -1)
 (global-font-lock-mode 1)
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
+(require 'git-gutter+)
+
+(git-gutter+-mode 1)
+
 
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
@@ -57,8 +61,8 @@
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
 
 (setq web-mode-code-indent-offset 4)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 4)
+(setq web-mode-markup-indent-offset 4)
 
 (setq initial-scratch-message
       ";; scratch buffer")
@@ -190,20 +194,22 @@
           (t "      ")))
    "    "
    ; directory and buffer/file name
-   (:propertize (:eval (shorten-directory default-directory 30))
+   (:propertize (:eval (shorten-directory default-directory 25))
                 face mode-line-folder-face)
    (:propertize "%b"
                 face mode-line-filename-face)
    ; narrow [default -- keep?]
    " %n "
    ; mode indicators: vc, recursive edit, major mode, minor modes, process, global
-   (vc-mode vc-mode)
    "  %["
    (:propertize mode-name
                 face mode-line-mode-face)
    "%] "
-   (:eval (propertize (format-mode-line minor-mode-alist)
-                      'face 'mode-line-minor-mode-face))
+   ;(:eval (propertize (format-mode-line minor-mode-alist)
+   ;'face 'mode-line-minor-mode-face))
+   "["
+   "%p" ;; % above top
+   "] "
    (:propertize mode-line-process
                 face mode-line-process-face)
    (global-mode-string global-mode-string)

@@ -12,8 +12,12 @@
  '(display-time-24hr-format nil)
  '(eshell-load-hook nil)
  '(fci-rule-color "#383838")
+ '(fringe-mode nil nil (fringe))
  '(indent-tabs-mode t)
+ '(indicate-buffer-boundaries (quote ((t . right) (top . right) (bottom . right) (up . right) (down . right))))
  '(js-indent-level 4)
+ '(js-paren-indent-offset 0)
+ '(js3-boring-indentation t)
  '(js3-indent-level 4)
  '(js3-indent-tabs-mode t)
  '(main-line-separator-style (quote arrow14))
@@ -34,5 +38,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml-modeline-end-face ((t (:inherit match))) t)
- '(sml-modeline-vis-face ((t (:background "blue"))) t))
+ '(sml-modeline-end-face ((t (:inherit match))))
+ '(sml-modeline-vis-face ((t (:background "blue")))))
