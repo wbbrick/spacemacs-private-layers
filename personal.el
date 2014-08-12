@@ -162,15 +162,22 @@
 (setq org-agenda-files (list "../org/work.org"
                              "../org/home.org"))
 
+;;don't need this with e2wm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (dired ".")					  ;;
+;; (split-window-horizontally 20) ;;
+;; (other-window 1)				  ;;
+;; (dired "../org")				  ;;
+;; (split-window-vertically 30)	  ;;
+;; (other-window 1)				  ;;
+;; (eshell)						  ;;
+;; (other-window 1)				  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(dired ".")
-(split-window-horizontally 20)
-(other-window 1)
-(dired "../org")
-(split-window-vertically 30)
-(other-window 1)
-(eshell)
-(other-window 1)
+(require 'e2wm)
+(global-set-key (kbd "M-+") 'e2wm:start-management)
+(e2wm:start-management)
+(e2wm:dp-code)
 
 ;;mode line customization
 ;; Mode line setup
@@ -284,6 +291,7 @@
 (set-face-attribute 'mode-line-80col-face nil
     :inherit 'mode-line-position-face
     :foreground "black" :background "#eab700")
+
 
 ;;NOTES
 
