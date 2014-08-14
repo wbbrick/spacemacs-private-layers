@@ -139,18 +139,17 @@
 (whitespace-mode +0)
 (setq prelude-whitespace nil)
 
-(defvar active-window (frame-selected-window))
+(add-to-list 'load-path "c:/bin/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+  '(progn
+	 (require 'tern-auto-complete)
+	 (tern-ac-setup)))
+(auto-complete-mode t)
 
-(defun active-window-switch ()
-  (let ((win (frame-selected-window)))
-    (when (not (eq win active-window))
-      (with-selected-window active-window
-        (buffer-face-mode -1))
-      (setq active-window win)
-      (setq buffer-face-mode-face (list :background "#181818"))
-      (buffer-face-mode 1))))
-
-(add-hook 'post-command-hook #'active-window-switch)
+(hiwin-activate)
 
 (cond
  ((file-exists-p "e:/workspace") (cd "E:/workspace") )
@@ -178,6 +177,8 @@
 (global-set-key (kbd "M-+") 'e2wm:start-management)
 (e2wm:start-management)
 (e2wm:dp-code)
+(e2wm:dp-code-imenu-toggle-command)
+(eshell)
 
 ;;mode line customization
 ;; Mode line setup
@@ -292,6 +293,7 @@
     :inherit 'mode-line-position-face
     :foreground "black" :background "#eab700")
 
+(enlarge-window-horizontally 15)
 
 ;;NOTES
 

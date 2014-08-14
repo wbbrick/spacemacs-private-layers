@@ -13,6 +13,7 @@
  '(eshell-load-hook nil)
  '(fci-rule-color "#383838")
  '(fringe-mode nil nil (fringe))
+ '(git-gutter+-window-width nil)
  '(indent-tabs-mode t)
  '(indicate-buffer-boundaries (quote ((t . right) (top . right) (bottom . right) (up . right) (down . right))))
  '(js-indent-level 4)
