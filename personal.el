@@ -147,7 +147,10 @@
   '(progn
 	 (require 'tern-auto-complete)
 	 (tern-ac-setup)))
-(auto-complete-mode t)
+
+(add-hook 'js-mode-hook (lambda () (auto-complete-mode t)))
+(add-hook 'js2-mode-hook (lambda () (auto-complete-mode t)))
+
 
 (hiwin-activate)
 
@@ -161,24 +164,15 @@
 (setq org-agenda-files (list "../org/work.org"
                              "../org/home.org"))
 
-;;don't need this with e2wm
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (dired ".")					  ;;
-;; (split-window-horizontally 20) ;;
-;; (other-window 1)				  ;;
-;; (dired "../org")				  ;;
-;; (split-window-vertically 30)	  ;;
-;; (other-window 1)				  ;;
-;; (eshell)						  ;;
-;; (other-window 1)				  ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(dired ".")					  ;;
+(split-window-horizontally 20) ;;
+(other-window 1)				  ;;
+(dired "../org")				  ;;
+(split-window-vertically 30)	  ;;
+(other-window 1)				  ;;
+(eshell)						  ;;
+(other-window 1)				  ;;
 
-(require 'e2wm)
-(global-set-key (kbd "M-+") 'e2wm:start-management)
-(e2wm:start-management)
-(e2wm:dp-code)
-(e2wm:dp-code-imenu-toggle-command)
-(eshell)
 
 ;;mode line customization
 ;; Mode line setup
