@@ -5,8 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
  '(backward-delete-char-untabify-method (quote hungry))
- '(custom-enabled-themes (quote (wombat)))
- '(custom-safe-themes (quote ("39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
+ '(custom-enabled-themes (quote (gruvbox)))
+ '(custom-safe-themes (quote ("454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
  '(dired-details-hidden-string "")
  '(dired-listing-switches "1 a")
  '(display-time-24hr-format nil)
@@ -24,6 +24,7 @@
  '(main-line-separator-style (quote arrow14))
  '(mode-line-format (quote ("%e" (:eval (concat (main-line-rmw (quote left) main-line-color1) (main-line-buffer-id (quote left) main-line-color1 main-line-color2) (main-line-major-mode (quote left) main-line-color1) (main-line-narrow (quote left) main-line-color1 main-line-color2) (main-line-vc (quote center) main-line-color2) (main-line-make-fill main-line-color2) (main-line-row (quote right) main-line-color1 main-line-color2) (main-line-percent-xpm (quote right) nil main-line-color1) (main-line-percent (quote center) nil main-line-color1))))))
  '(mode-line-in-non-selected-windows nil)
+ '(scss-compile-at-save nil)
  '(sml-modeline-borders (quote ("(" . ")")))
  '(sml-modeline-len 20)
  '(sml-modeline-mode t)
@@ -39,5 +40,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml-modeline-end-face ((t (:inherit match))))
- '(sml-modeline-vis-face ((t (:background "blue")))))
+ '(sml-modeline-end-face ((t (:inherit match))) t)
+ '(sml-modeline-vis-face ((t (:background "blue"))) t))
