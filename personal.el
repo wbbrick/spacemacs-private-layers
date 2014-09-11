@@ -67,7 +67,7 @@
 (setq initial-scratch-message
       ";; scratch buffer")
 
-;(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;(add-to-list 'auto-mode-alist '("\\.ejs\\'" . html-mode))
 
 
@@ -139,10 +139,14 @@
 (whitespace-mode +0)
 (setq prelude-whitespace nil)
 
+(require 'flycheck)
+(add-hook 'js2-mode-hook
+          (lambda () (flycheck-mode t)))
+
 (add-to-list 'load-path "c:/bin/tern/emacs/")
 (autoload 'tern-mode "tern.el" nil t)
-(add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'js2-mode-hook (lambda () (ac-js2-mode t)))
 (eval-after-load 'tern
   '(progn
 	 (require 'tern-auto-complete)
