@@ -143,9 +143,6 @@
 (add-hook 'js2-mode-hook
           (lambda () (flycheck-mode t)))
 
-(add-to-list 'load-path "c:/bin/tern/emacs/")
-(autoload 'tern-mode "tern.el" nil t)
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook (lambda () (ac-js2-mode t)))
 (eval-after-load 'tern
   '(progn
