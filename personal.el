@@ -24,6 +24,14 @@
 (global-git-gutter+-mode 1)
 
 
+;;eshell stuff
+(setq eshell-prompt-function
+	  (lambda ()
+		(concat
+		 (eshell/pwd) (if (= (user-uid) 0) " # " " $ "))))
+
+(setq eshell-prompt-regexp "^[^#$\n]*[#$] ")
+
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
   (interactive)
@@ -288,7 +296,7 @@
     :inherit 'mode-line-position-face
     :foreground "black" :background "#eab700")
 
-(enlarge-window-horizontally 15)
+(shrink-window-horizontally 15)
 
 ;;NOTES
 
