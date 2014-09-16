@@ -13,7 +13,6 @@ Return a list of installed packages or nil for every package not installed."
 
 (ensure-package-installed
  'ac-helm
- 'ac-js2
  'anzu
  'browse-kill-ring
  'csv-mode
@@ -29,7 +28,6 @@ Return a list of installed packages or nil for every package not installed."
  'doremi
  'faces+
  'flycheck
- 'helm-flycheck
  'gh
  'git-gutter+
  'git-gutter
@@ -41,7 +39,6 @@ Return a list of installed packages or nil for every package not installed."
  'helm
  'hexrgb
  'hiwin
- 'js2-refactor
  'js2-mode
  'json-mode
  'json-reformat
@@ -53,7 +50,6 @@ Return a list of installed packages or nil for every package not installed."
  'multiple-cursors
  'paredit
  'pcache
- 'php-mode
  'projectile
  'pkg-info
  'epl
@@ -64,14 +60,11 @@ Return a list of installed packages or nil for every package not installed."
  'smartparens
  'dash
  'smex
- 'tern-auto-complete
  'auto-complete
  'popup
- 'tern
  'json
  'undo-tree
  'volatile-highlights
  'web-mode
  'yaml-mode
- 'yasnippet
  )
