@@ -56,11 +56,19 @@
 ; Add DuckDuckGo to webjump
 (eval-after-load "webjump"
   '(add-to-list 'webjump-sites
-                '("ddg" .
+                '("Duck Duck Go" .
                   [simple-query
                    "www.duckduckgo.com"
                    "https://duckduckgo.com/?q="
                    ""])))
+(eval-after-load "webjump"
+  '(add-to-list 'webjump-sites
+                '("Stack Overflow" .
+                  [simple-query
+                   "www.stackoverflow.com"
+                   "https://stackoverflow.com/search?q="
+                   ""])))
+
 
 (require 'package)
 (add-to-list 'package-archives
@@ -184,7 +192,7 @@
                              "../org/home.org"))
 
 (dired ".")					  ;;
-(split-window-horizontally 20) ;;
+(split-window-horizontally 30) ;;
 (other-window 1)				  ;;
 (dired "../org")				  ;;
 (split-window-vertically 30)	  ;;
