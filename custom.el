@@ -10,6 +10,7 @@
  '(dired-details-hidden-string "")
  '(dired-listing-switches "1 a")
  '(display-time-24hr-format nil)
+ '(elfeed-feeds (quote ("www.google.com")))
  '(eshell-load-hook nil)
  '(fci-rule-color "#383838")
  '(fringe-mode nil nil (fringe))
@@ -40,5 +41,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml-modeline-end-face ((t (:inherit match))) t)
- '(sml-modeline-vis-face ((t (:background "blue"))) t))
+ '(sml-modeline-end-face ((t (:inherit match))))
+ '(sml-modeline-vis-face ((t (:background "blue")))))
