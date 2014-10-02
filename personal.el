@@ -43,14 +43,32 @@
 
 (global-set-key (kbd "C-x g") 'webjump)
 
+(setq helm-quick-update                     t ; do not display invisible candidates
+      helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+      helm-buffers-fuzzy-matching           t ; fuzzy matching buffer names when non--nil
+      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+      helm-scroll-amount                    4 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t)
+
+(helm-mode 1)
+
 ; Add DuckDuckGo to webjump
 (eval-after-load "webjump"
   '(add-to-list 'webjump-sites
-                '("ddg" .
+                '("Duck Duck Go" .
                   [simple-query
                    "www.duckduckgo.com"
                    "https://duckduckgo.com/?q="
                    ""])))
+(eval-after-load "webjump"
+  '(add-to-list 'webjump-sites
+                '("Stack Overflow" .
+                  [simple-query
+                   "www.stackoverflow.com"
+                   "https://stackoverflow.com/search?q="
+                   ""])))
+
 
 (require 'package)
 (add-to-list 'package-archives
@@ -160,6 +178,22 @@
 (add-hook 'js-mode-hook (lambda () (auto-complete-mode t)))
 (add-hook 'js2-mode-hook (lambda () (auto-complete-mode t)))
 
+;fix dired forward and back
+(defun dired-back-to-top ()
+  (interactive)
+  (beginning-of-buffer)
+  (dired-next-line 4))
+
+(define-key dired-mode-map
+  (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
+
+(defun dired-jump-to-bottom ()
+  (interactive)
+  (end-of-buffer)
+  (dired-next-line -1))
+
+(define-key dired-mode-map
+  (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)
 
 (hiwin-activate)
 
@@ -174,7 +208,7 @@
                              "../org/home.org"))
 
 (dired ".")					  ;;
-(split-window-horizontally 20) ;;
+(split-window-horizontally 30) ;;
 (other-window 1)				  ;;
 (dired "../org")				  ;;
 (split-window-vertically 30)	  ;;
