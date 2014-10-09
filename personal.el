@@ -24,6 +24,9 @@
 (global-git-gutter+-mode 1)
 
 
+(setq yas-snippet-dirs "./snippets")
+(sublimity-global-mode t)
+
 ;;eshell stuff
 (setq eshell-prompt-function
 	  (lambda ()
@@ -90,6 +93,8 @@
 (setq web-mode-css-indent-offset 4)
 (setq web-mode-markup-indent-offset 4)
 
+(add-hook 'web-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+
 (setq initial-scratch-message
       ";; scratch buffer")
 
@@ -113,8 +118,14 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+(setq prelude-guru nil)
+
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 (define-key my-keys-minor-mode-map (kbd "M-q") 'kill-this-buffer)
+
+(define-key my-keys-minor-mode-map (kbd "<left>") 'undo)
+(define-key my-keys-minor-mode-map (kbd "<right>") 'redo)
+(define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char)
 
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char) ; was indent-new-comment-line
 (define-key my-keys-minor-mode-map (kbd "M-l") 'forward-char)  ; was downcase-word
@@ -259,8 +270,6 @@
                 face mode-line-process-face)
    (global-mode-string global-mode-string)
    "    "
-   ; nyan-mode uses nyan cat as an alternative to %p
-   (:eval (when nyan-mode (list (nyan-create))))
    ))
 
 ;; Helper function

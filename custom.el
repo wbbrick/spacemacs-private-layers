@@ -5,10 +5,15 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
  '(backward-delete-char-untabify-method (quote hungry))
+ '(blink-cursor-mode nil)
+ '(curchg-default-cursor-color "Green")
+ '(curchg-default-cursor-type (quote box))
+ '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes (quote (gruvbox)))
  '(custom-safe-themes (quote ("454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
  '(desktop-path (quote ("~/.emacs.d/desktop/")))
  '(desktop-save (quote ask-if-exists))
+ '(desktop-save-mode nil)
  '(dired-details-hidden-string "")
  '(dired-listing-switches "1 a")
  '(display-time-24hr-format nil)
@@ -37,6 +42,8 @@
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map (quote ((20 . "#BC8383") (40 . "#CC9393") (60 . "#DFAF8F") (80 . "#D0BF8F") (100 . "#E0CF9F") (120 . "#F0DFAF") (140 . "#5F7F5F") (160 . "#7F9F7F") (180 . "#8FB28F") (200 . "#9FC59F") (220 . "#AFD8AF") (240 . "#BFEBBF") (260 . "#93E0E3") (280 . "#6CA0A3") (300 . "#7CB8BB") (320 . "#8CD0D3") (340 . "#94BFF3") (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3")
+ '(wakatime-api-key "9feeaac3-8676-4d84-bf29-f4da9b6c34a1")
+ '(wakatime-cli-path "d:/wakatime/wakatime-cli.py")
  '(whitespace-line-column 80))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

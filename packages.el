@@ -68,4 +68,6 @@ Return a list of installed packages or nil for every package not installed."
  'volatile-highlights
  'web-mode
  'yaml-mode
+ 'yasnippet
+ 'zencoding-mode
  )
