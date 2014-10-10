@@ -26,6 +26,7 @@ Return a list of installed packages or nil for every package not installed."
  'doremi-cmd
  'doremi-frm
  'doremi
+ 'emmet-mode
  'faces+
  'flycheck
  'gh
@@ -69,5 +70,4 @@ Return a list of installed packages or nil for every package not installed."
  'web-mode
  'yaml-mode
  'yasnippet
- 'zencoding-mode
  )

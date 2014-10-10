@@ -93,7 +93,7 @@
 (setq web-mode-css-indent-offset 4)
 (setq web-mode-markup-indent-offset 4)
 
-(add-hook 'web-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+(add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 
 (setq initial-scratch-message
       ";; scratch buffer")
