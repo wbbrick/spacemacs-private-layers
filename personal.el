@@ -123,8 +123,6 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 (define-key my-keys-minor-mode-map (kbd "M-q") 'kill-this-buffer)
 
-(define-key my-keys-minor-mode-map (kbd "<left>") 'undo)
-(define-key my-keys-minor-mode-map (kbd "<right>") 'redo)
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char)
 
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char) ; was indent-new-comment-line
