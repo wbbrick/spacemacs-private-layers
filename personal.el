@@ -13,6 +13,11 @@
 ;(require 'dired-rainbow)
 (require 'dired-details+)
 
+(key-chord-define-global "ii" 'other-window)
+(key-chord-define-global "bc" 'helm-buffers-list)
+(key-chord-define-global "qq" 'kill-this-buffer)
+(key-chord-define-global "\;\;" 'save-buffer)
+
 (require 'undo-tree)
 (undo-tree-mode 1)
 
