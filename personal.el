@@ -93,6 +93,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 
 (setq web-mode-code-indent-offset 4)
 (setq web-mode-css-indent-offset 4)
@@ -144,7 +145,6 @@
 
 (defun clean-js-file () (interactive)
   (delete-trailing-whitespace)
-  (prelude-tabify-buffer)
   )
 
 (my-keys-minor-mode 1)

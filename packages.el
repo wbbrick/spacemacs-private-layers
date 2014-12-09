@@ -44,6 +44,7 @@ Return a list of installed packages or nil for every package not installed."
  'json-mode
  'json-reformat
  'json-snatcher
+ 'jsx-mode
  'key-chord
  'less-css-mode
  'markdown-mode

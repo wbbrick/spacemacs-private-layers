@@ -3,14 +3,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-js2-evaluate-calls t)
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
  '(backward-delete-char-untabify-method (quote hungry))
  '(blink-cursor-mode nil)
  '(curchg-default-cursor-color "Green")
  '(curchg-default-cursor-type (quote box))
  '(cursor-in-non-selected-windows nil)
- '(custom-enabled-themes (quote (gruvbox)))
- '(custom-safe-themes (quote ("454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
+ '(custom-enabled-themes (quote (hipster)))
+ '(custom-safe-themes (quote ("cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
  '(desktop-path (quote ("~/.emacs.d/desktop/")))
  '(desktop-save (quote ask-if-exists))
  '(desktop-save-mode nil)
@@ -29,6 +30,7 @@
  '(js3-boring-indentation t)
  '(js3-indent-level 4)
  '(js3-indent-tabs-mode t)
+ '(less-css-compile-at-save nil)
  '(main-line-separator-style (quote arrow14))
  '(mode-line-format (quote ("%e" (:eval (concat (main-line-rmw (quote left) main-line-color1) (main-line-buffer-id (quote left) main-line-color1 main-line-color2) (main-line-major-mode (quote left) main-line-color1) (main-line-narrow (quote left) main-line-color1 main-line-color2) (main-line-vc (quote center) main-line-color2) (main-line-make-fill main-line-color2) (main-line-row (quote right) main-line-color1 main-line-color2) (main-line-percent-xpm (quote right) nil main-line-color1) (main-line-percent (quote center) nil main-line-color1))))))
  '(mode-line-in-non-selected-windows nil)
