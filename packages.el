@@ -61,6 +61,7 @@ Return a list of installed packages or nil for every package not installed."
  'scss-mode
  'smartparens
  'sublimity
+ 'theme-changer
  'dash
  'smex
  'auto-complete
