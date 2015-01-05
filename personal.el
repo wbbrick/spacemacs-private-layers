@@ -8,7 +8,7 @@
 (setq calendar-location-name "Baltimore, MD")
 (setq calendar-latitude 39.39)
 (setq calendar-longitude -76.61)
-(change-theme 'hipster 'wombat)
+(change-theme 'gruvbox 'wombat)
 
 (require 'whitespace)
 (setq whitespace-style '(face empty lines-tail trailing))
@@ -33,7 +33,6 @@
 
 (require 'git-gutter+)
 (global-git-gutter+-mode 1)
-
 
 (setq yas-snippet-dirs "./snippets")
 (sublimity-global-mode t)
@@ -105,7 +104,8 @@
 (setq web-mode-css-indent-offset 4)
 (setq web-mode-markup-indent-offset 4)
 
-(add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'web-mode-hook 'emmet-mode);; Auto-start on any markup modes
+(add-hook 'web-mode-hook  (lambda () (setq tab-width 2)))
 
 (setq initial-scratch-message
       ";; scratch buffer")
@@ -135,7 +135,7 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 (define-key my-keys-minor-mode-map (kbd "M-q") 'kill-this-buffer)
 
-(define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char)
+(define-key text-mode-map (kbd "<tab>") 'tab-to-tab-stop)
 
 (define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char) ; was indent-new-comment-line
 (define-key my-keys-minor-mode-map (kbd "M-l") 'forward-char)  ; was downcase-word
