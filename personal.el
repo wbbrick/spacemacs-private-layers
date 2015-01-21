@@ -349,7 +349,7 @@
     :foreground "black" :background "#eab700")
 
 (shrink-window-horizontally 15)
-
+(toggle-frame-fullscreen)
 ;;NOTES
 
 ;;wombat is a good dark medium-contrast theme, comes built in
