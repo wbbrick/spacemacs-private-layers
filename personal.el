@@ -4,12 +4,6 @@
 (setq auto-save-default nil)
 (setq-default indent-tabs-mode t)
 
-(require 'theme-changer)
-(setq calendar-location-name "Baltimore, MD")
-(setq calendar-latitude 39.39)
-(setq calendar-longitude -76.61)
-(change-theme 'gruvbox 'wombat)
-
 (require 'whitespace)
 (setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
