@@ -4,16 +4,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-js2-evaluate-calls t)
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector ["white" "#303030" "#b3b3b3" "#606060"])
+ '(auto-save-default nil)
  '(backward-delete-char-untabify-method (quote hungry))
  '(blink-cursor-mode nil)
  '(curchg-default-cursor-color "Green")
  '(curchg-default-cursor-type (quote box))
  '(cursor-in-non-selected-windows nil)
- '(custom-enabled-themes (quote (hipster)))
+ '(custom-enabled-themes (quote (gruvbox)))
  '(custom-safe-themes
    (quote
-	("806d8c827b214f5f60348114bd27c6dcb5d19047f7ac482ad61e8077a6c5ea60" "9dae95cdbed1505d45322ef8b5aa90ccb6cb59e0ff26fef0b8f411dfc416c552" "4eaad15465961fd26ef9eef3bee2f630a71d8a4b5b0a588dc851135302f69b16" "cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
+	("75d807376ac43e6ac6ae3892f1f377a4a3ad2eb70b14223b4ed0355e62116814" "806d8c827b214f5f60348114bd27c6dcb5d19047f7ac482ad61e8077a6c5ea60" "9dae95cdbed1505d45322ef8b5aa90ccb6cb59e0ff26fef0b8f411dfc416c552" "4eaad15465961fd26ef9eef3bee2f630a71d8a4b5b0a588dc851135302f69b16" "cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "454dc6f3a1e9e062f34c0f988bcef5d898146edc5df4aa666bf5c30bed2ada2e" "cd9d626cc4a0ca0d35c6fcb22e1c988aa19707e71f8b50953eba60daf7048f7b" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" default)))
  '(desktop-path (quote ("~/.emacs.d/desktop/")))
  '(desktop-save (quote ask-if-exists))
  '(desktop-save-mode nil)
@@ -76,6 +79,7 @@
 		nil main-line-color1))))))
  '(mode-line-in-non-selected-windows nil)
  '(paradox-github-token t)
+ '(prelude-auto-save nil)
  '(scss-compile-at-save nil)
  '(sml-modeline-borders (quote ("(" . ")")))
  '(sml-modeline-len 20)
@@ -83,6 +87,7 @@
  '(sml-modeline-numbers (quote percentage))
  '(standard-indent 4)
  '(tab-width 4)
+ '(undo-tree-auto-save-history t)
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote

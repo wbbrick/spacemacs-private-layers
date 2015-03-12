@@ -50,10 +50,12 @@ Return a list of installed packages or nil for every package not installed."
  'markdown-mode
  'move-text
  'multiple-cursors
+ 'paradox
  'paredit
  'pcache
  'projectile
  'pkg-info
+ 'purpose
  'epl
  'rainbow-delimiters
  'rainbow-mode

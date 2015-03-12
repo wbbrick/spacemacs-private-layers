@@ -28,6 +28,9 @@
 (require 'git-gutter+)
 (global-git-gutter+-mode 1)
 
+(require 'purpose)
+(purpose-mode)
+
 (setq yas-snippet-dirs "./snippets")
 (sublimity-global-mode t)
 
@@ -343,7 +346,7 @@
     :foreground "black" :background "#eab700")
 
 (shrink-window-horizontally 15)
-(toggle-frame-fullscreen)
+(toggle-frame-maximized)
 ;;NOTES
 
 ;;wombat is a good dark medium-contrast theme, comes built in
