@@ -130,11 +130,11 @@
 
 (define-key text-mode-map (kbd "<tab>") 'tab-to-tab-stop)
 
-(define-key my-keys-minor-mode-map (kbd "M-j") 'backward-char) ; was indent-new-comment-line
-(define-key my-keys-minor-mode-map (kbd "M-l") 'forward-char)  ; was downcase-word
-(define-key my-keys-minor-mode-map (kbd "M-i") 'previous-line) ; was tab-to-tab-stop
-(define-key my-keys-minor-mode-map (kbd "M-k") 'next-line) ; was kill-sentence
-(define-key my-keys-minor-mode-map (kbd "C-b") 'helm-mini)
+(define-key my-keys-minor-mode-map (kbd "M-j") (kbd "C-b")) ; was indent-new-comment-line
+(define-key my-keys-minor-mode-map (kbd "M-l") (kbd "C-f"))  ; was downcase-word
+(define-key my-keys-minor-mode-map (kbd "M-i") (kbd "C-p")) ; was tab-to-tab-stop
+(define-key my-keys-minor-mode-map (kbd "M-k") (kbd "C-n")) ; was kill-sentence
+(define-key my-keys-minor-mode-map (kbd "M-b") 'helm-mini)
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-minor-mode-map)
