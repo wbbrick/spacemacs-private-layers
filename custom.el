@@ -86,6 +86,7 @@
  '(sml-modeline-mode t)
  '(sml-modeline-numbers (quote percentage))
  '(standard-indent 4)
+ '(swiper-completion-method (quote helm))
  '(tab-width 4)
  '(undo-tree-auto-save-history t)
  '(vc-annotate-background "#2B2B2B")
