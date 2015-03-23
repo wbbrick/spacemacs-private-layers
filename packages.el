@@ -55,7 +55,7 @@ Return a list of installed packages or nil for every package not installed."
  'pcache
  'projectile
  'pkg-info
- 'purpose
+ 'window-purpose
  'epl
  'rainbow-delimiters
  'rainbow-mode
