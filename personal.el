@@ -23,7 +23,7 @@
 (require 'git-gutter+)
 (global-git-gutter+-mode 1)
 
-(require 'purpose)
+(require 'window-purpose)
 (purpose-mode)
 
 (setq yas-snippet-dirs "./snippets")
@@ -47,7 +47,6 @@
     (linum-mode -1)))
 
 (global-set-key (kbd "C-x g") 'webjump)
-(global-set-key (kbd "C-s") 'swiper)
 
 (setq helm-quick-update                     t ; do not display invisible candidates
       helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
