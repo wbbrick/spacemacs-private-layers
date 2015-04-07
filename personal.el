@@ -28,6 +28,9 @@
 
 (setq yas-snippet-dirs "./snippets")
 (sublimity-global-mode t)
+(require 'sublimity)
+(require 'sublimity-scroll)
+(require 'sublimity-map)
 
 ;;eshell stuff
 (setq eshell-prompt-function
@@ -249,9 +252,9 @@
           ((buffer-modified-p)
            (propertize " ** " 'face 'mode-line-modified-face))
           (t "      ")))
-   "    "
+   " "
    ; directory and buffer/file name
-   (:propertize (:eval (shorten-directory default-directory 25))
+   (:propertize (:eval (shorten-directory default-directory 10))
                 face mode-line-folder-face)
    (:propertize "%b"
                 face mode-line-filename-face)
