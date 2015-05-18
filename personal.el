@@ -345,12 +345,12 @@
     :foreground "black" :background "#eab700")
 
 (shrink-window-horizontally 15)
-(toggle-frame-maximized)
 
 (add-to-list 'default-frame-alist '(font .  "DejaVu Sans Mono-10" ))
 (set-face-attribute 'default t :font  "DejaVu Sans Mono-10" )
 
 (purpose-x-code1-setup)
+(toggle-frame-maximized)
 ;;NOTES
 
 ;;wombat is a good dark medium-contrast theme, comes built in
