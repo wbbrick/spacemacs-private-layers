@@ -15,6 +15,7 @@ Return a list of installed packages or nil for every package not installed."
  'ac-helm
  'anzu
  'browse-kill-ring
+ 'corral
  'csv-mode
  'darktooth-theme
  'diminish

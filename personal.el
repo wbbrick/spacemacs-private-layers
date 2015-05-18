@@ -150,6 +150,12 @@
 
 (my-keys-minor-mode 1)
 
+(global-set-key (kbd "M-9") 'corral-parentheses-backward)
+(global-set-key (kbd "M-0") 'corral-parentheses-forward)
+(global-set-key (kbd "M-[") 'corral-brackets-backward)
+(global-set-key (kbd "M-]") 'corral-brackets-forward)
+(global-set-key (kbd "M-\"") 'corral-double-quotes-backward)
+
 (global-set-key (kbd "M-j") 'backward-char) ; was indent-new-comment-line
 (global-set-key (kbd "M-l") 'forward-char)  ; was downcase-word
 (global-set-key (kbd "M-i") 'previous-line) ; was tab-to-tab-stop
