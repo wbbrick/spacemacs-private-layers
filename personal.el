@@ -24,7 +24,7 @@
 (global-git-gutter+-mode 1)
 
 (require 'window-purpose)
-(purpose-mode)
+;(purpose-mode)
 
 (setq yas-snippet-dirs "./snippets")
 ;(sublimity-global-mode t)
@@ -181,7 +181,7 @@
 (global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
-(add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map "u" 'dired-up-directory)))
+(add-hook 'speedbar-mode-hook (lambda () (define-key speedbar-mode-map "u" 'speedbar-up-directory)))
 
 (global-hl-line-mode +0)
 (whitespace-mode +0)
@@ -229,15 +229,15 @@
 (setq org-agenda-files (list "../org/work.org"
                              "../org/home.org"))
 
-(dired ".")					  ;;
-(split-window-horizontally 30) ;;
-(other-window 1)				  ;;
-(dired "../org")				  ;;
-(split-window-vertically 30)	  ;;
-(other-window 1)				  ;;
-(eshell)						  ;;
-(other-window 1)				  ;;
 
+;; (split-window-horizontally 30) ;;
+;; (other-window 1)				  ;;
+;; (dired "../org")				  ;;
+;; (split-window-vertically 30)	  ;;
+;; (other-window 1)				  ;;
+;; (eshell)						  ;;
+;; (other-window 1)				  ;;
+(sr-speedbar-open)
 
 ;;mode line customization
 ;; Mode line setup
@@ -355,7 +355,7 @@
 (add-to-list 'default-frame-alist '(font .  "DejaVu Sans Mono-10" ))
 (set-face-attribute 'default t :font  "DejaVu Sans Mono-10" )
 
-(purpose-x-code1-setup)
+;(purpose-x-code1-setup)
 (toggle-frame-maximized)
 ;;NOTES
 

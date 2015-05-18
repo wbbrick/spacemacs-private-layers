@@ -88,6 +88,8 @@
  '(sml-modeline-len 20)
  '(sml-modeline-mode t)
  '(sml-modeline-numbers (quote percentage))
+ '(speedbar-verbosity-level 0)
+ '(sr-speedbar-right-side nil)
  '(standard-indent 4)
  '(swiper-completion-method (quote helm))
  '(tab-width 4)
