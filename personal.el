@@ -27,10 +27,10 @@
 (purpose-mode)
 
 (setq yas-snippet-dirs "./snippets")
-(sublimity-global-mode t)
-(require 'sublimity)
-(require 'sublimity-scroll)
-(require 'sublimity-map)
+;(sublimity-global-mode t)
+;(require 'sublimity)
+;(require 'sublimity-scroll)
+;(require 'sublimity-map)
 
 ;;eshell stuff
 (setq eshell-prompt-function
@@ -175,6 +175,7 @@
 (global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
+(add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map "u" 'dired-up-directory)))
 
 (global-hl-line-mode +0)
 (whitespace-mode +0)
@@ -345,6 +346,8 @@
 
 (shrink-window-horizontally 15)
 (toggle-frame-maximized)
+
+(purpose-x-code1-setup)
 ;;NOTES
 
 ;;wombat is a good dark medium-contrast theme, comes built in
