@@ -183,6 +183,9 @@
 
 (add-hook 'speedbar-mode-hook (lambda () (define-key speedbar-mode-map "u" 'speedbar-up-directory)))
 
+(speedbar-add-supported-extension ".ejs")
+(speedbar-add-supported-extension ".json")
+
 (global-hl-line-mode +0)
 (whitespace-mode +0)
 (setq prelude-whitespace nil)
