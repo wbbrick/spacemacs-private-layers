@@ -186,6 +186,10 @@
 (speedbar-add-supported-extension ".ejs")
 (speedbar-add-supported-extension ".json")
 
+(custom-set-variables
+ '(speedbar-show-unknown-files t)
+ )
+
 (global-hl-line-mode +0)
 (whitespace-mode +0)
 (setq prelude-whitespace nil)
