@@ -183,8 +183,6 @@
 
 (add-hook 'speedbar-mode-hook (lambda () (define-key speedbar-mode-map "u" 'speedbar-up-directory)))
 
-(speedbar-add-supported-extension ".ejs")
-(speedbar-add-supported-extension ".json")
 
 (custom-set-variables
  '(speedbar-show-unknown-files t)

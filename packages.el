@@ -13,6 +13,7 @@ Return a list of installed packages or nil for every package not installed."
 
 (ensure-package-installed
  'ac-helm
+ 'ac-js2
  'anzu
  'browse-kill-ring
  'corral
