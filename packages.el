@@ -62,12 +62,12 @@ Return a list of installed packages or nil for every package not installed."
  'epl
  'rainbow-delimiters
  'rainbow-mode
+ 'rudel
  's
  'scss-mode
  'smartparens
  'sr-speedbar
  'sublimity
- 'theme-changer
  'dash
  'smex
  'auto-complete
