@@ -50,6 +50,7 @@
  '(js3-indent-tabs-mode t)
  '(less-css-compile-at-save nil)
  '(main-line-separator-style (quote arrow14))
+ '(markdown-command "md2html")
  '(mode-line-format
    (quote
 	("%e"
@@ -88,6 +89,7 @@
  '(sml-modeline-len 20)
  '(sml-modeline-mode t)
  '(sml-modeline-numbers (quote percentage))
+ '(speedbar-show-unknown-files t)
  '(speedbar-verbosity-level 0)
  '(sr-speedbar-right-side nil)
  '(standard-indent 4)
