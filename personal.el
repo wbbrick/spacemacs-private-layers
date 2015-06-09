@@ -361,8 +361,9 @@
 (set-face-attribute 'default t :font  "DejaVu Sans Mono-10" )
 
 ;(purpose-x-code1-setup)
-(toggle-frame-maximized)
+(prelude-fullscreen)
 ;;NOTES
+
 
 ;;wombat is a good dark medium-contrast theme, comes built in
 ;;recommended packages:
