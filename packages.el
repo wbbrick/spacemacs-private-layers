@@ -78,4 +78,5 @@ Return a list of installed packages or nil for every package not installed."
  'web-mode
  'yaml-mode
  'yasnippet
+ 'zeal-at-point
  )

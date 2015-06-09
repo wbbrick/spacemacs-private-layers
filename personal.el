@@ -181,6 +181,8 @@
 (global-set-key [f10] 'clean-js-file)
 (global-set-key [f5] 'call-last-kbd-macro)
 
+(global-set-key (kbd "<C-f3>") 'zeal-at-point)
+
 (add-hook 'speedbar-mode-hook (lambda () (define-key speedbar-mode-map "u" 'speedbar-up-directory)))
 
 
