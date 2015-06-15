@@ -1,3 +1,0 @@
-#name: get
-# --
-this.model.get('$0')m
