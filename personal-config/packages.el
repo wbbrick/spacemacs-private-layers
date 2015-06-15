@@ -23,14 +23,9 @@
 
 ;; For each package, define a function doremi/init-<package-doremi>
 ;;
-(defun sr-speedbar/init-sr-speedbar ()
+(defun personal-config/init-personal-config ()
   "Initialize my package"
-  (use-package sr-speedbar
-    :commands (
-               sr-speedbar-open
-               )
-    )
-  (sr-speedbar-open)
+  (toggle-frame-fullscreen-non-native)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
