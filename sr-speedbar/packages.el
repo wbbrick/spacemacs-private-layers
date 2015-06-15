@@ -10,11 +10,10 @@
 ;;
 ;;; License: GPLv3
 
-(defvar sr-speedbar-packages
+(defvar personal-config-packages
   '(
     ;; package doremis go here
-    speedbar
-    sr-speedbar
+    personal-config
     )
   )
 
@@ -23,22 +22,9 @@
 
 ;; For each package, define a function doremi/init-<package-doremi>
 ;;
-(defun sr-speedbar/init-sr-speedbar ()
+(defun personal-config/init-personal-config ()
   "Initialize my package"
-  (add-hook 'speedbar-mode-hook (lambda () (define-key speedbar-mode-map "u" 'speedbar-up-directory)))
-  (custom-set-variables
-   '(speedbar-show-unknown-files t)
-   )
-  (set-variable 'sr-speedbar-right-side nil)
-  (set-variable 'speedbar-directory-unshown-regexp "^$")
-  (set-variable 'sr-speedbar-width 15)
 
-  (use-package sr-speedbar
-    :commands (
-               sr-speedbar-open
-               )
-    )
-  (sr-speedbar-open)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
