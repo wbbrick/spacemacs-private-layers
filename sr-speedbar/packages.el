@@ -13,8 +13,8 @@
 (defvar sr-speedbar-packages
   '(
     ;; package doremis go here
-	speedbar
-	sr-speedbar
+    speedbar
+    sr-speedbar
     )
   )
 
@@ -29,12 +29,16 @@
   (custom-set-variables
    '(speedbar-show-unknown-files t)
    )
+  (set-variable 'sr-speedbar-right-side nil)
+  (set-variable 'speedbar-directory-unshown-regexp "^$")
+  (set-variable 'sr-speedbar-width 15)
 
   (use-package sr-speedbar
     :commands (
                sr-speedbar-open
                )
     )
+  (sr-speedbar-open)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'

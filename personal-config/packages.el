@@ -30,6 +30,7 @@
                sr-speedbar-open
                )
     )
+  (sr-speedbar-open)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
