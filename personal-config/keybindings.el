@@ -23,9 +23,12 @@
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "M-1") 'previous-multiframe-window)
 (global-set-key (kbd "<C-S-tab>") 'previous-multiframe-window)
+(global-set-key (kbd "C-+") 'zoom-frm-in)
+(global-set-key (kbd "C--") 'zoom-frm-out)
 
 (global-set-key [f12] 'open-external-explorer)
 (global-set-key [f11] 'open-personal-file)
 (global-set-key [f10] 'delete-trailing-whitespace)
 (global-set-key [f9] 'open-workspace)
 (global-set-key [f5] 'call-last-kbd-macro)
+

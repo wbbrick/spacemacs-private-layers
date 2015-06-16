@@ -25,6 +25,10 @@
 (defun neotree/init-neotree ()
   "Initialize my package"
   (neotree)
+<<<<<<< HEAD
+  (neotree-dir "~/workspace/")
+=======
+
   (setq cdir (cond
    ((file-exists-p "e:/workspace") (cd "E:/workspace") )
    ((file-exists-p "d:/workspace") (cd "D:/workspace") )
@@ -32,6 +36,8 @@
    ( t (cd "~/workspace"))
    ))
   (neotree-dir cdir)
+>>>>>>> 7292dcdb3de42ab07ffbd478ffd9d8047c267328
+  
 )
 ;;
 ;; Often the body of an initialize function uses `use-package'
