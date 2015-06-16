@@ -25,6 +25,7 @@
 (defun neotree/init-neotree ()
   "Initialize my package"
   (neotree)
+  (neotree-dir "~/workspace/")
   
 )
 ;;
