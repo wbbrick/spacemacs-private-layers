@@ -10,10 +10,10 @@
 ;;
 ;;; License: GPLv3
 
-(defvar personal-config-packages
+(defvar json-packages
   '(
     ;; package doremis go here
-    personal-config
+    json-mode
     )
   )
 

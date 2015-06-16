@@ -10,13 +10,13 @@
 ;;
 ;;; License: GPLv3
 
-(defvar sr-speedbar-pre-extensions
+(defvar json-pre-extensions
   '(
     ;; pre extension doremis go here
     )
   "List of all extensions to load before the packages.")
 
-(defvar sr-speedbar-post-extensions
+(defvar json-post-extensions
   '(
     ;; post extension doremis go here
     )
