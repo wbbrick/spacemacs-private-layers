@@ -10,10 +10,10 @@
 ;;
 ;;; License: GPLv3
 
-(defvar personal-config-packages
+(defvar neotree-packages
   '(
     ;; package doremis go here
-    personal-config
+    neotree
     )
   )
 
@@ -22,10 +22,12 @@
 
 ;; For each package, define a function doremi/init-<package-doremi>
 ;;
-(defun personal-config/init-personal-config ()
+(defun neotree/init-neotree ()
   "Initialize my package"
-
-  )
+  (neotree)
+  (neotree-dir "~/workspace/")
+  
+)
 ;;
 ;; Often the body of an initialize function uses `use-package'
 ;; For more info on `use-package', see readme:

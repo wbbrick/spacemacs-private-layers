@@ -10,11 +10,9 @@
 ;;
 ;;; License: GPLv3
 
-(defvar sr-speedbar-packages
+(defvar personal-config-packages
   '(
     ;; package doremis go here
-	speedbar
-	sr-speedbar
     )
   )
 
@@ -25,7 +23,6 @@
 ;;
 (defun personal-config/init-personal-config ()
   "Initialize my package"
-  (toggle-frame-fullscreen-non-native)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
