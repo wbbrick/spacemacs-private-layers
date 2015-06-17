@@ -30,8 +30,10 @@ which require an initialization must be listed explicitly in the list.")
                smart-tabs-insinuate
                )
     )
-    (smart-tabs-insinuate 'c 'javascript 'html)
-   )
+  (smart-tabs-insinuate 'c 'javascript 'html)
+
+  (setq tab-width 4)
+  )
 ;;
 ;; Often the body of an initialize function uses `use-package'
 ;; For more info on `use-package', see readme:

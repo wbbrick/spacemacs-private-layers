@@ -13,9 +13,9 @@
 (defvar js-packages
   '(
     ;; package jss go here
-	ac-js2
-	jsx-mode
-	web-mode
+    ac-js2
+    jsx-mode
+    web-mode
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -39,6 +39,7 @@ which require an initialization must be listed explicitly in the list.")
   (setq web-mode-code-indent-offset 4)
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
+  (setq js2-node-externs t)
   )
 
 (defun js/init-ac-js2 ()
