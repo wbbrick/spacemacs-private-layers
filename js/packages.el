@@ -16,6 +16,7 @@
     ac-js2
     jsx-mode
     web-mode
+    editorconfig
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -44,7 +45,19 @@ which require an initialization must be listed explicitly in the list.")
 
 (defun js/init-ac-js2 ()
   "Initialize my package"
-  (add-hook 'js2-mode-hook (lambda () (ac-js2-mode t)))
+  (add-hook 'js2-mode-hook
+            '(lambda ()
+               ;; turn on js2 mode
+               (ac-js2-mode t)
+
+               ;; Setting indentation lvel
+               (setq c-basic-offset 4)
+
+               ;; Make TAB equivilent to 4 spaces
+               (setq tab-width 4)
+
+               )
+            )
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'

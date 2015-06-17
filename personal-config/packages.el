@@ -24,21 +24,10 @@
 (defun personal-config/init-personal-config ()
   "Initialize my package"
 
-  (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
-  (define-key my-keys-minor-mode-map (kbd "M-q") 'kill-this-buffer)
-
-  (define-key text-mode-map (kbd "<tab>") 'tab-to-tab-stop)
-
-  (define-key my-keys-minor-mode-map (kbd "M-j") (kbd "C-b")) ; was indent-new-comment-line
-  (define-key my-keys-minor-mode-map (kbd "M-l") (kbd "C-f"))  ; was downcase-word
-  (define-key my-keys-minor-mode-map (kbd "M-i") (kbd "C-p")) ; was tab-to-tab-stop
-  (define-key my-keys-minor-mode-map (kbd "M-k") (kbd "C-n")) ; was kill-sentence
-  (define-key my-keys-minor-mode-map (kbd "M-b") 'helm-mini)
-  (define-minor-mode my-keys-minor-mode
-    "A minor mode so that my key settings override annoying major modes."
-    t " my-keys" 'my-keyes-minor-mode-map)
-
   (my-keys-minor-mode 1)
+  (setq tab-width 4)
+  (setq-default indent-tabs-mode t)
+  (tern-mode-disable)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'

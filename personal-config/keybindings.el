@@ -3,7 +3,7 @@
 (defun open-workspace () (interactive) (dired "d:/workspace"))
 
 (bind-keys*
- ( (kbd "M-") . helm-mini); buffer-select
+ ( (kbd "M-b") . helm-mini); buffer-select
  ( (kbd "M-j") . backward-char); was indent-new-comment-line
  ( (kbd "M-l") . forward-char); was downcase-word
  ( (kbd "M-i") . previous-line); was tab-to-tab-stop
