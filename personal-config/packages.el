@@ -30,6 +30,7 @@
   (tern-mode-disable)
   )
 ;;
+
 ;; Often the body of an initialize function uses `use-package'
 ;; For more info on `use-package', see readme:
 ;; https://github.com/jwiegley/use-package

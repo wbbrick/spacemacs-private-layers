@@ -56,6 +56,11 @@ which require an initialization must be listed explicitly in the list.")
                ;; Make TAB equivilent to 4 spaces
                (setq tab-width 4)
 
+               ;; Add subword mode
+               (subword-mode 1)
+
+               ;; turn off irritating tern-mode
+               (tern-mode 0)
                )
             )
   )
