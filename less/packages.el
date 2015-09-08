@@ -14,10 +14,6 @@
   '(
     ;; package lesss go here
     less-css-mode
-<<<<<<< HEAD
-    rainbow-mode
-=======
->>>>>>> 96901039edf058ec3cb9fae0b5747ea6f00e97f8
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -35,7 +31,10 @@ which require an initialization must be listed explicitly in the list.")
                less-css-mode
                )
     )
-
+  (add-to-list 'auto-mode-alist '("\\.variables\\'" . less-css-mode))
+  (add-to-list 'auto-mode-alist '("\\.overrides\\'" . less-css-mode))
+  (add-to-list 'auto-mode-alist '("\\.variables\\'" . rainbow-mode))
+  (add-to-list 'auto-mode-alist '("\\.overrides\\'" . rainbow-mode))
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
