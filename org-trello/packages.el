@@ -1,4 +1,4 @@
-;;; packages.el --- web-mode Layer packages File for Spacemacs
+;;; packages.el --- org-trello Layer packages File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2014 Sylvain Benner
 ;; Copyright (c) 2014-2015 Sylvain Benner & Contributors
@@ -12,28 +12,18 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq web-mode-packages
+(setq org-trello-packages
     '(
-      ;; package names go here
-	  web-mode
+      org-trello
       ))
 
 ;; List of packages to exclude.
-(setq web-mode-excluded-packages '())
+(setq org-trello-excluded-packages '())
 
-;; For each package, define a function web-mode/init-<package-name>
+;; For each package, define a function org-trello/init-<package-name>
 ;;
-(defun web-mode/init-web-mode ()
+(defun org-trello/init-org-trello ()
   "Initialize my package"
-  (use-package web-mode)
-  (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.cshtml\\'" . web-mode))
-  (defun my-web-mode-hook ()
-	"Hooks for Web mode."
-	(setq web-mode-markup-indent-offset 2)
-	)
-  (add-hook 'web-mode-hook  'my-web-mode-hook)
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'
